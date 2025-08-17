@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024/Event</title>
+    <style>
+        /* Resetting margin, padding, and setting box-sizing for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Styling for header section */
+        header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container styling for layout alignment */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo styling */
+        .logo img {
+            width: 150px;
+        }
+
+        /* Navigation menu styling */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect for navigation links */
+        nav ul li a:hover {
+            color: #98c257;
+        }
+
+        /* Effect for underline animation on hover */
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background-color: #98c257;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+        }
+
+        /* Active link styling */
+        nav ul li a.active {
+            color: #98c257; 
+        }
+
+        nav ul li a.active::before {
+            width: 100%;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #98c257; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        /* Main content styling */
+        main {
+            padding: 40px 20px;
+        }
+
+        /* Section styling for layout */
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for section titles */
+        h2 {
+            color: #00695c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* General image styling */
+        img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        /* Paragraph styling */
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Layout for content with image and text */
+        .section-content {
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .section-content img {
+            flex: 1;
+            max-width: 50%;
+            margin-right: 20px;
+        }
+
+        .section-content div.text {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        /* Styling for three images placed side by side */
+        .three-images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .three-images img {
+            width: 32%;
+            margin-bottom: 20px;
+        }
+
+        /* Carousel styling */
+        .carousel {
+            display: flex;
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+        }
+
+        .carousel img {
+            width: 24%; 
+            object-fit: cover;
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Call-to-action button styling */
+        .cta-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-button a {
+            background-color: #ff7043;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button a:hover {
+            background-color: #e64a19;
+        }
+
+        /* Responsive adjustments for medium-sized screens */
+        @media (max-width: 992px) {
+            .three-images img {
+                width: 48%;
+            }
+
+            .section-content {
+                flex-direction: column;
+            }
+
+            .section-content img, .section-content div.text {
+                max-width: 100%;
+                margin: 0 0 20px 0;
+            }
+        }
+
+        /* Responsive adjustments for small screens */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .three-images img {
+                width: 100%;
+            }
+
+            .carousel-inner {
+                width: 400%;
+            }
+
+            .carousel-inner img {
+                width: 100%;
+            }
+
+            /* Keyframes for sliding animation */
+            @keyframes slide {
+                0% { transform: translateX(0%); }
+                20% { transform: translateX(0%); }
+                25% { transform: translateX(-100%); }
+                45% { transform: translateX(-100%); }
+                50% { transform: translateX(-200%); }
+                70% { transform: translateX(-200%); }
+                75% { transform: translateX(-300%); }
+                95% { transform: translateX(-300%); }
+                100% { transform: translateX(0%); }
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo section -->
+            <div class="logo">
+                <img src="Pictures/logo.jpg" alt="SJVRC Logo" />
+            </div>
+            <!-- Navigation menu -->
+            <nav>
+                <ul class="menu">
+                    <li><a href="Home.html">Home</a></li>  
+                    <li><a href="#"class="active">Events</a></li>
+                    <li><a href="General_Information.HTML">General<br>Information</a></li>
+                    <li><a href="Participation_Information.html">Participation<br>Information</a></li>
+                    <li><a href="About_Us.html">About Us</a></li>
+                    <li><a href="Inquiry.html">Inquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <section>
+                <h2>Event Program - Charity Run 2024</h2>
+                <!-- Three images section -->
+                <div class="three-images">
+                    <img src="Pictures/Jogging.jpg">
+                    <img src="Pictures/Charity_Run_2024.png">
+                    <img src="Pictures/chay.jpg">
+                </div>
+                <!-- Carousel of images -->
+                <div class="carousel">
+                    <img src="Pictures/cung_chay.jpeg">
+                    <img src="Pictures/giai_tri.jpg">
+                    <img src="Pictures/trao_giai.jpg">
+                    <img src="Pictures/tiep_suc.jpeg">
+                </div>
+                
+
+                <!-- Event Objective -->
+                <div class="section-content">
+                    <img src="Pictures/z5924164254752_8b5ebf27b82d73d78855d9ec4f8476fe.jpg"/>
+                    <div class="text">
+                        <div class="section-title">Event Objectives</div>
+                        <p>The Charity Run 2024 event is organized with the primary purpose of raising funds to support the people in northern Vietnam affected by Typhoon Yagi. In addition to financial aid, we aim to raise community awareness about the importance of unity and sharing in times of hardship. The donations will be directed to reputable charitable organizations, ensuring effective use for rebuilding homes, healthcare, and daily necessities for the affected residents.</p>
+                        <p>Additionally, the event creates opportunities for the community to engage in physical activities together, fostering a spirit of unity. It also encourages mutual support in achieving noble goals.</p>
+                    </div>
+                </div>
+
+                <!-- Event Theme -->
+                <div class="section-content">
+                    <img src="Pictures/z5924165301993_835d5ae685fde10be0747b0cd3e04d66.jpg"/>
+                    <div class="text">
+                        <div class="section-title">Theme of the event</div>
+                        <p>The theme of Charity Run 2024 is 'Steps of Love - Strengthening the Future'. We hope that each step taken not only brings health benefits to the participants but also contributes meaningfully to supporting the northern Vietnam communities after Typhoon Yagi. Each step reflects the community's love and sharing spirit for those in difficult circumstances. The event promises to be a meaningful day, combining physical activity, community spirit, and entertaining activities for all ages.</p>
+                    </div>
+                </div>
+
+                <!-- Event Schedule -->
+                <div class="section-content">
+                    <img src="Pictures/_1616dab2-97f3-4808-bdaf-04ba4b912d2d.jpeg"/>
+                    <div class="text">
+                        <div class="section-title">Event Schedule</div>
+                        <p><strong>Event Date:</strong> October 11, 2024</p>
+                        <p><strong>8:00 AM -  Registration and Warm-up:</strong> Participants register at the event area, receive their t-shirts and running numbers. The warm-up session includes gentle exercises led by professional trainers.</p>
+                        <p><strong>9:00 AM - Opening Ceremony:</strong> The event begins with speeches from the organizers and sponsors, introducing the goals and significance of the event.</p>
+                        <p><strong>9:30 AM - Run Competition:</strong> The 5km and 10km runs start. Water stations and medical support are set up along the route to ensure the safety of all participants.</p>
+                        <p><strong>12:00 PM - Award Ceremony and Closing: </strong> The results of the competition are announced, awards are given to the best athletes, and the event concludes.</p>
+                        <p>We hope this event will be a great success and receive enthusiastic participation from the community.</p>
+                    </div>
+                </div>
+
+                <!-- Entertainment Activities -->
+                <div class="section-content">
+                    <img src="Pictures/320929630_1086851488653564_8719266690569226665_n.jpg"/>
+                    <div class="text">
+                        <div class="section-title">Entertainment</div>
+                        <p>Throughout the event, we've prepared a variety of entertainment activities to bring joy to all participants:</p>
+                        <ul>
+                            <li><strong>Live Music Performances:</strong> Local bands will play vibrant music to create an exciting atmosphere.</li><br>
+                            <li><strong>Games Area for Children and Families:</strong> Fun games to entertain children and bring joy to families.</li><br>
+                            <li><strong>Free Food Stalls:</strong> Offering a variety of delicious foods to ensure all participants are well-fed.</li><br>
+                            <li><strong>Sponsor Product Display Area:</strong> Showcasing products and services from our event partners and sponsors.</li><br>
+                        </ul>
+                        <p>All activities are organized to create a fun, community-focused environment and enhance the experience for everyone involved.</p>
+                    </div>
+                </div>
+
+                <!-- Award Ceremony -->
+                <div class="section-content">
+                    <img src="Pictures/321044517_1574892762965357_6228713739788821760_n.jpg"/>
+                    <div class="text">
+                        <div class="section-title">Award Ceremony</div>
+                        <p>The awards ceremony will take place at 12:00 PM, immediately after the race ends. The award categories include:</p>
+                        <ul>
+                            <li><strong>First, Second, Third place in 5km and 10km categories:</strong> Awarding medals and prestigious trophies to the best athletes.</li><br>
+                            <li><strong>Best Group Category:</strong> The team that runs with the best solidarity and support for each other will receive a special reward.</li><br>
+                            <li><strong>Gifts from sponsors:</strong> Attractive gifts from sponsors will be awarded to winners and special participants.</li><br>
+                        </ul>
+                        <p>The award ceremony was not only a meaningful conclusion to the event but also an opportunity to thank and recognize the contributions of all parties involved.</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-button">
+                    <a href="Inquiry.html">Sign up now</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+</body>
+</html>

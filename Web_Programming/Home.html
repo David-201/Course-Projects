@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding to UTF-8 for proper character display and adjusts viewport for mobile responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024</title>
+    <style>
+        /* Universal selector to remove default margin and padding, and ensure consistent box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling: sets font to Arial, background color to white, and text color to dark grey */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Header styling: white background, padding, and drop shadow */
+        header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for header content with flex layout, centering items horizontally */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo styling with fixed width */
+        .logo img {
+            width: 150px;
+        }
+
+        /* Navigation menu styling: removes list bullets and sets up horizontal layout */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+        }
+
+        /* List item styling within navigation */
+        nav ul li {
+            position: relative;
+        }
+
+        /* Link styling for navigation menu: bold text, black color, and padding */
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect on navigation links: changes text color to greenish */
+        nav ul li a:hover {
+            color: #98c257;
+        }
+
+        /* Creates underline effect on hover for navigation links */
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background-color: #98c257;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Expands underline when hovering over a link */
+        nav ul li a:hover::before {
+            width: 100%;
+        }
+
+        /* Active link styling: changes color to green and keeps underline visible */
+        nav ul li a.active {
+            color: #98c257; 
+        }
+
+        /* Ensures underline is shown for active link */
+        nav ul li a.active::before {
+            width: 100%;
+        }
+
+        /* Footer styling: green background with white text, centered content */
+        footer {
+            background-color: #98c257; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        /* Hero section styling: takes up full height, centers content, and applies background color */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+        }
+
+        /* Fullscreen image styling within the hero section, with brightness filter */
+        .hero img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Overlay styling for the hero section: covers the whole section and centers content */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Text block within the hero section, with absolute positioning */
+        .hero-text {
+            position: absolute;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Main heading styling in the hero section */
+        .hero-text h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Subheading styling in the hero section */
+        .hero-text h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling: green background, white text, padding, and rounded corners */
+        .btn {
+            background-color: #b0d46c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect for buttons: changes background color to darker green */
+        .btn:hover {
+            background-color: #98c257;
+        }
+
+        /* Countdown container styling: centers content and applies black background */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding: 50px 0;
+            margin-top: auto;
+        }
+
+        /* Countdown layout: aligns countdown boxes horizontally with spacing */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Individual countdown time box styling: black background, round shape, and green border */
+        .time-box {
+            background-color: black;
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+            width: 150px;
+            height: 150px;
+            border: 5px solid #98c257;
+        }
+
+        /* Number styling inside countdown boxes */
+        .time-box h2 {
+            font-size: 48px;
+            margin: 0;
+            color: #98c257;
+        }
+
+        /* Label styling (e.g., "Days", "Hours") inside countdown boxes */
+        .time-box p {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Pictures/logo.jpg" alt="SJVRC Logo" />
+            </div>
+            <!-- Navigation menu with list items -->
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="active">Home</a></li>  
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="General_Information.HTML">General<br>Information</a></li>
+                    <li><a href="Participation_Information.html">Participation<br>Information</a></li>
+                    <li><a href="About_Us.html">About Us</a></li>
+                    <li><a href="Inquiry.html">Inquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section with overlay text and background image -->
+    <section class="hero">
+        <div class="overlay">
+            <img src="Pictures/Should_Home_Page.jpg" alt="Charity Run">
+            <div class="hero-text">
+                <h1>Welcome to Charity Run 2024</h1><br>
+                <h3>Create fun events to raise support for the people of the</h3>
+                <h3>North to overcome Typhoon Yagi</h3><br><br>
+                <a href="Events.html" class="btn">All Activities In This Event</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Countdown timer section -->
+    <section class="countdown-container">
+        <div class="countdown">
+            <div class="time-box">
+                <h2 id="days">00</h2>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <h2 id="hours">00</h2>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <h2 id="minutes">00</h2>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <h2 id="seconds">00</h2>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown timer script to update timer every second -->
+    <script>
+        var countDownDate = new Date("Oct 11, 2024 07:00:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the countdown is finished, display 00:00:00:00
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+    </script>
+
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+</body>
+</html>

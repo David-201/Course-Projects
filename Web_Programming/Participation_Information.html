@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024/Participants Information</title>
+    <style>
+        /* Reset default margin, padding, and set box-sizing for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Styling for header section */
+        header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container class to center content and adjust alignment */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo image size adjustment */
+        .logo img {
+            width: 150px;
+        }
+
+        /* Navigation bar styling */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+        }
+
+        /* Individual list item positioning */
+        nav ul li {
+            position: relative;
+        }
+
+        /* Navigation link styles */
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect for navigation links */
+        nav ul li a:hover {
+            color: #98c257;
+        }
+
+        /* Create an underline effect on hover */
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background-color: #98c257;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Expand underline on hover */
+        nav ul li a:hover::before {
+            width: 100%;
+        }
+
+        /* Styling for the active link */
+        nav ul li a.active {
+            color: #98c257; 
+        }
+
+        /* Show underline on active link */
+        nav ul li a.active::before {
+            width: 100%;
+        }
+
+        /* Main content area styles */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header elements in the main section */
+        h1, h2, h3 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Main title styling */
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Subtitles */
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        /* Smaller headings */
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        /* Paragraph and list item text */
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Indent lists */
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        /* Link styles */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Underline on link hover */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        /* Border for table, headers, and cells */
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        /* Padding and alignment for table cells */
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Background for table headers */
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Darken button on hover */
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer section styling */
+        footer {
+            background-color: #98c257; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            /* Adjust body padding for smaller screens */
+            body {
+                padding: 10px;
+            }
+
+            /* Reduce heading sizes */
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            /* Adjust text size */
+            p, li {
+                font-size: 1rem;
+            }
+
+            /* Reduce main section padding */
+            main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo image -->
+            <div class="logo">
+                <img src="Pictures/logo.jpg" alt="SJVRC Logo" />
+            </div>
+            <!-- Navigation menu -->
+            <nav>
+                <ul class="menu">
+                    <li><a href="Home.html">Home</a></li>  
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="General_Information.HTML">General<br>Information</a></li>
+                    <li><a href="#" class="active">Participation<br>Information</a></li>
+                    <li><a href="About_Us.html">About Us</a></li>
+                    <li><a href="Inquiry.html">Inquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="participation-info">
+            <!-- Main section title -->
+            <h1>Participation Information</h1>
+            <!-- Subsection: About participation -->
+            <h2>1. About participation</h2>
+            <p>
+                Taking part in the Charity Run 2024 is a great way to improve the lives of those in need and help build a stronger community. More than just a sporting event, this charity run offers an opportunity to bond and make a positive impact on society. Join us and be part of the change!
+            </p>
+            <!-- Subsection: Detailed instructions -->
+            <h2>2. Detailed instructions on how to participate</h2>
+            <h3>How to register:</h3>
+            <ol>
+                <!-- Step-by-step registration process -->
+                <li>Visit the event registration page <a href="https://docs.google.com/forms/d/e/1FAIpQLSftlutABcUfNtiN_IoCB5QSbd5TdhIcSGqchjf6o8pHh9BV4w/viewform">register</a>.</li>
+                <li>Fill in personal information including: Full name, Phone number, Email.</li>
+                <li>Select type of participation: Athlete, Volunteer, or Sponsor.</li>
+                <li>Pay the participation fee (if any) via online payment gateway or directly at the event.</li>
+                <li>Confirm registration via email or SMS.</li>
+            </ol>
+
+            <!-- Description of participant roles -->
+            <h3>Participant roles:</h3>
+            <ul>
+                <li><strong>Athletes:</strong> Join the run with distances from 5km, 10km or 21km.</li>
+                <li><strong>Volunteer:</strong> Assist with event organization, water distribution, participant guidance and safety throughout the run.</li>
+                <li><strong>Sponsor:</strong> Make a financial contribution or in-kind sponsorship such as drinks, t-shirts, medals, or medical equipment for the event.</li>
+            </ul>
+            
+            <!-- Event time and location information -->
+            <h2>3. Time and place</h2>
+            <p><strong>Event Time:</strong> October 11, 2024.</p>
+            <p><strong>Start time:</strong> 8:00am (Participants need to be present by 6:30am for check-in).</p>
+            <p><strong>Location:</strong> Saigon Exhibition and Convention Center (SECC), District 7, Ho Chi Minh City.</p>
+            
+            <!-- Participation rules and guidelines -->
+            <h2>4. Rules and instructions for participation</h2>
+            <ul>
+                <li><strong>Conditions of participation:</strong> Participants must be 18 years of age or older, in good health, and free of any medical problems that would prevent physical activity.</li>
+                <li><strong>Prepare clothes:</strong> Participants should wear comfortable clothing, sneakers and bring a hat/cap for sun protection.</li>
+                <li><strong>Follow the right route:</strong> Participants must follow the routes and instructions from the organizers to ensure safety.</li>
+                <li><strong>Safety rules:</strong> Do not push, run in the wrong direction or cross the restricted area.</li>
+                <li><strong>Health Guarantee:</strong> Drink plenty of water before and during the run to stay hydrated, and notify the volunteer immediately if you feel unwell.</li>
+            </ul>
+
+             <!-- Table displaying participation and sponsorship fees -->
+            <h2>5. Participation and sponsorship costs</h2>
+            <table>
+                <tr>
+                    <th>Distance</th>
+                    <th>Male (VND)</th>
+                    <th>Female (VND)</th>
+                </tr>
+                <tr>
+                    <td>5km</td>
+                    <td>200.000</td>
+                    <td>180.000</td>
+                </tr>
+                <tr>
+                    <td>10km</td>
+                    <td>300.000</td>
+                    <td>270.000</td>
+                </tr>
+                <tr>
+                    <td>21km</td>
+                    <td>500.000</td>
+                    <td>450.000</td>
+                </tr>
+            </table>
+
+            <!-- Contact information for support -->
+            <h2>6. Contact support</h2>
+            <p><strong>Email:</strong> <a href="mailto:ledactam.290404@gmail.com">ledactam.290404@gmail.com</a></p>
+            <p><strong>Phone Numbers:</strong> <a href="tel:0378611737">0378611737</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100049025453245" target="_blank">Charity Run 2024</a></p>
+            <p><strong>Zalo</strong> 0378611737</p>
+        </section>
+    </main>
+
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+</body>
+</html>

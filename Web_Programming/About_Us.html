@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024/About Us</title>
+    <style>
+        /* Reset margin, padding, and set box-sizing for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Styling for the header section */
+        header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container to centralize and align items in the header */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Styling for the logo image */
+        .logo img {
+            width: 150px;
+        }
+
+        /* Basic styles for navigation */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Styling for each navigation item */
+        nav ul li {
+            position: relative;
+        }
+
+        /* Links styling in the navigation */
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        /* Change link color on hover */
+        nav ul li a:hover {
+            color: #98c257;
+        }
+
+        /* Add a line below active or hovered links */
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background-color: #98c257;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Ensure the line appears for active or hovered links */
+        nav ul li a:hover::before,
+        nav ul li a.active::before {
+            width: 100%;
+        }
+
+        /* Highlight the active navigation link */
+        nav ul li a.active {
+            color: #98c257;
+        }
+
+        /* Styling for the footer section */
+        footer {
+            background-color: #98c257; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        /* Container for the main content */
+        .content-container {
+            max-width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styling for titles */
+        h1, h2 {
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Basic paragraph styling */
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Styling for team and volunteers sections */
+        .team-section,
+        .volunteers-section {
+            margin: 40px 0;
+        }
+
+        /* Flex container for team members */
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        /* Individual team member container */
+        .team-member {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for team member images */
+        .team-member img {
+            width: 100%;
+            border-radius: 30px; /* Changed to rectangular with rounded corners */
+            max-width: 300px;
+            height: auto;
+        }
+
+        /* Name styling for team members */
+        .team-member h3 {
+            margin: 10px 0 5px;
+            color: #0056b3;
+        }
+
+        /* Description styling for team members */
+        .team-member p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Grid layout for volunteer section */
+        .volunteers-section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        /* Container for each volunteer */
+        .volunteer {
+            text-align: center;
+        }
+
+        /* Styling for volunteer images */
+        .volunteer img {
+            width: 100%;
+            border-radius: 15px; /* Changed to rectangular with rounded corners */
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Name styling for volunteers */
+        .volunteer h4 {
+            margin-top: 10px;
+            color: #0056b3;
+            font-size: 14px;
+        }
+
+        /* Container for contact information */
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Paragraph styling for contact details */
+        .contact-info p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header containing the logo and navigation menu -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Pictures/logo.jpg" alt="SJVRC Logo" />
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="General_Information.HTML">General<br>Information</a></li>
+                    <li><a href="Participation_Information.html">Participation<br>Information</a></li>
+                    <li><a href="#" class="active">About Us</a></li>
+                    <li><a href="Inquiry.html">Inquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <h1>About Us</h1>
+        <p>
+            Welcome to the Charity Run 2024 event page! We are proud to bring together runners, volunteers, and sponsors in a community-driven effort to make a difference. The Charity Run 2024 is organized by <strong>Typhoon Yagi Support Network</strong>, a non-profit organization dedicated to providing relief and rebuilding efforts for northern Vietnam communities affected by Typhoon Yagi. Our mission is to promote solidarity and raise funds to support these communities in their recovery.
+        </p>
+
+        <h2>Our Mission</h2>
+        <p>
+            At <strong>Typhoon Yagi Support Network</strong>, we believe in the power of community. Our goal is to not only host an engaging event but also to create lasting impact by raising funds for families and individuals who have been severely affected by Typhoon Yagi. By joining the Charity Run 2024, you become part of a movement dedicated to bringing hope and support to those in need.
+        </p>
+
+        <h2>Our Team</h2>
+        <div class="team-section">
+            <!-- Team members with images and details -->
+            <div class="team-member">
+                <img src="Pictures/Ban_Than.jpg" alt="Your Name">
+                <h3>Le Dac Tam</h3>
+                <p>Founder & Organizer</p>
+            </div>
+            <div class="team-member">
+                <img src="Pictures/Bao_ca.jpg">
+                <h3>Nguyen An Thien Bao</h3>
+                <p>Co-Organizer</p>
+            </div>
+        </div>
+
+        <h2>Volunteers</h2>
+        <div class="volunteers-section">
+            <!-- Volunteer list with images and names -->
+            <div class="volunteer">
+                <img src="Pictures/Anh_Khoa.png">
+                <h4>Anh Khoa</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Ngoc_Ngu.png">
+                <h4>Ngoc Ngu</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Minh_Thai.png">
+                <h4>Minh Thai</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Le_Thanh.png">
+                <h4>Le Thanh</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Son_Ngan.png">
+                <h4>Son Ngan</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Chi_Kha.png">
+                <h4>Chi Kha</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Tan_Loc.png">
+                <h4>Tan Loc</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Khanh_Linh.png">
+                <h4>Khanh Linh</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Nhat_Hao.png">
+                <h4>Nhat Hao</h4>
+            </div>
+            <div class="volunteer">
+                <img src="Pictures/Quoc_Anh.png">
+                <h4>Quoc Anh</h4>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h2>Event Organizer</h2>
+            <p>
+                <strong>Organization Name:</strong> Typhoon Yagi Support Network<br>
+                <strong>Email:</strong> <a href="mailto:ledactam.290404@gmail.com">ledactam.290404@gmail.com</a><br>
+                <strong>Phone:</strong> <a href="tel:0378611737">0378611737</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+</body>
+</html>

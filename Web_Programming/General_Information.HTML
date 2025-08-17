@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024/General Information</title>
+    <style>
+        /* Resetting margins, padding, and box-sizing for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styles for the body of the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Styles for the header */
+        header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for aligning elements within the header */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Styling the logo */
+        .logo img {
+            width: 150px;
+        }
+
+        /* Navigation menu styles */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+        }
+
+        /* List item and anchor styles for the menu */
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect for menu items */
+        nav ul li a:hover {
+            color: #98c257;
+        }
+
+        /* Adding a highlight effect under menu items on hover */
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background-color: #98c257;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+        }
+
+        /* Active menu item styling */
+        nav ul li a.active {
+            color: #98c257; 
+        }
+
+        nav ul li a.active::before {
+            width: 100%;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #98c257; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        /* Main content section styling */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* General section styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* Styling for section headers */
+        section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #555;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        /* Paragraph styling */
+        section p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Scrollable box for benefits section */
+        .scroll-box {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        /* Logo slider styling */
+        .logo-slider {
+            display: flex;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        /* Track for the logos to slide */
+        .logo-track {
+            display: flex;
+            animation: scroll 15s linear infinite;
+        }
+
+        /* Styling for the logos within the slider */
+        .logo-track img {
+            width: 150px;
+            margin: 0 15px;
+            transition: transform 0.3s;
+        }
+
+        /* Hover effect to enlarge logos */
+        .logo-track img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animation keyframes for scrolling effect */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        /* Input and textarea styles */
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #0b5394;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: 150px;
+            align-self: flex-start;
+        }
+
+        /* Hover effect for submit button */
+        input[type="submit"]:hover {
+            background-color: #073763;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            /* Make navigation vertical on smaller screens */
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            /* Adjust logo slider for mobile view */
+            .logo-slider {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Stop animation for logos on smaller screens */
+            .logo-track {
+                flex-direction: column;
+                animation: none;
+            }
+
+            /* Adjust logo margins for better spacing on smaller devices */
+            .logo-track img {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header containing the logo and navigation menu -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Pictures/logo.jpg"/>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="Home.html">Home</a></li>  
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="#"class="active">General<br>Information</a></li>
+                    <li><a href="Participation_Information.html">Participation<br>Information</a></li>
+                    <li><a href="About_Us.html">About Us</a></li>
+                    <li><a href="Inquiry.html">Inquiry</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content section -->
+    <div class="main-content">
+        <!-- Event location details -->
+        <section>
+            <h2>1. Event Location</h2>
+            <p><strong>Location:</strong> Saigon Exhibition and Convention Center (SECC), Ho Chi Minh City</p>
+            <p><strong>Location</strong> 799 Nguyen Van Linh, District 7, Ho Chi Minh City</p>
+            <p><strong>Date & Time:</strong> October 11, 2024, starting at 8:00 AM</p>
+            <p><strong>Google Maps Link:</strong> <a href="https://maps.app.goo.gl/HnfHmrPAd2hDLQe56">Click to view map</a></p>
+        </section>
+
+        <!-- Information about transport options -->
+        <section>
+            <h2>2. Means of Transport</h2>
+            <p><strong>Public transport:</strong> Bus routes 1024,1028,1225 will stop near SECC.</p>
+            <p><strong>Parking information:</strong> There is parking at SECC and the organizers have arranged 4 more nearby.</p>
+            <p><strong>Bicycle parking:</strong> Parking area for cyclists.</p>
+        </section>
+
+        <!-- Benefits section with a scrollable box -->
+        <section>
+            <h2>3. Special Benefits for Participants</h2>
+            <div class="scroll-box">
+                <p><strong>Free water station:</strong> Place at multiple points along the track.</p>
+                <p><strong>Medical station:</strong> Available at the start, mid-course and finish.</p>
+                <p><strong>Free event t-shirts:</strong> Pick up at registration desk for all participants.</p>
+                <p><strong>Gift bag:</strong> Includes snacks, certificate of participation and discount coupons from sponsors.</p>
+            </div>
+        </section>
+
+        <!-- Accessibility -->
+        <section>
+            <h2>4. Event Access</h2>
+            <p><strong>Wheelchair Access:</strong> SECC has a dedicated entrance for wheelchair users.</p>
+            <p><strong>Instructions for guests with disabilities:</strong> Volunteers are available to assist throughout the event.</p>
+        </section>
+
+        <!-- Safety Measures -->
+        <section>
+            <h2>5. Safety Measures</h2>
+            <p><strong>COVID-19 prevention:</strong> Masks are mandatory in crowded areas. Hand sanitizer stations are located throughout.</p>
+            <p><strong>Security checkpoint:</strong> Ensure safety for all participants and visitors.</p>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section>
+            <h2>6. Emergency Contact Information</h2>
+            <p><strong>On-site emergency number:</strong> 0378611737</p>
+            <p><strong>Lost and Found Store:</strong> Located at the main gate of SECC.</p>
+        </section>
+
+        <!-- Sponsors -->
+        <section>
+            <h2>7. Sponsor</h2>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <img src="Pictures/BIDV-logo-500x333.jpg">
+                    <img src="Pictures/7_eleven.jpg">
+                    <img src="Pictures/apple.png">
+                    <img src="Pictures/fpt.jpeg">
+                    <img src="Pictures/highlands_coffee.jpg">
+                    <img src="Pictures/MB_Bank.jpg">
+                    <img src="Pictures/TH_True_Milk.jpg">
+                    <img src="Pictures/toyota.svg">
+                    <img src="Pictures/logo-kinh-do-3.jpg">
+                    <img src="Pictures/OIP.jpeg">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+</body>
+</html>
