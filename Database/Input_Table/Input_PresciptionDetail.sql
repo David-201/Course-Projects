@@ -1,0 +1,8 @@
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('TH0301200001','Dexamethasone','20 tablets','Morning afternoon','10 days','2021-03-03','Drink before meals');
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('TH0301200001','Albuterol','30 tablets','Morning noon afternoon','10days','2022-01-12','Drink after meals');
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('MK0501200002','gelofusin infusion','2 bottles','','','2033-05-20','');
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('NT1001200003','covid-19 test kit','1 set','','','2022-01-01','');
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('NT1101200004','Panadol','6 bottles','Morning noon afternoon','1 day','2022-11-12','');
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('NT1201200005','Panadol','6 bottles','Morning noon afternoon','1 day','2022-11-12',''); 
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('CV1201200006','covid-19 test kit','1 set','','','2023-12-21','');
+insert into Hospital_Information.PrescriptionDetail(PrescriptionID,MedicineName,Dosage,Frequency,Duration,ExpirationDate,Note) values('TL1201200007','covid-19 test kit','1 set','','','2023-12-21','');

@@ -1,0 +1,6 @@
+RecordID,PatientID,VisitDate,Diagnosis,Prescription,Note
+000000000001,M1999TH06051,2020-01-03,"Respiratory obstruction due to phlegm","Dexamethasone, Albuterol",NULL
+000000000002,M2009MK30116,2020-01-05,"Covid-19 causes severe heart failure",,dead
+000000000003,M2001NT07832,2020-01-10,"Covid-19 virus infection",,NULL
+000000000004,M2004CV30129,2020-01-12,"Covid-19 infection leads to heart failure, falls down stairs at night",,death
+000000000005,M2006TL30087,2020-01-12,"Covid-19 infection leads to severe heart failure, stroke at night",,death

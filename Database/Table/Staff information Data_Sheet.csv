@@ -1,0 +1,18 @@
+StaffID,FullName,DOB,Sex,CitizenIdentification,Address,PhoneNumber,Email,DepartmentID,Position,Note
+F197019AK115,"Nguyen Huynh Son Ngan",1970-02-28,Female,096170030124,"Hoa Thanh Commune, Ca Mau City, Ca Mau Province, Vietnam",0971504097,nhs.ngan@hutech.edu.vn,181219AK2603,Doctor,NULL
+F197820KL120,"Le Thi Khanh Linh",1978-02-09,Female,083178030120,"Ba Tri District, Ben Tre Province, Vietnam",0902298300,Khanhlinh1978@gmail.com,201219TB0302,Specialist,NULL
+F198719PU136,"Le Ha Phuong Uyen",1987-03-31,Female,046187030136,"Huong Phong Commune, Hue City, Thua Thien Hue Province, Vietnam",0397317482,Uyenle1987@gmail.com,181219AK2603,Doctor,NULL
+F199020TH164,"Le Thi Hien",1990-11-17,Female,087190140164,"Chau Thanh District, Dong Thap Province, Vietnam",0985800785,lehien111@gmail.com,180220DD0401,Nurse,NULL
+F199120NN133,"Ngo Ngoc Ngu",1991-01-06,Female,095191030133,"Bac Lieu City, Bac Lieu Province, Vietnam",0337141673,Ngocngu1111@gmail.com,200120AK0306,Nurse,NULL
+F199120TH811,"Bui Thi Thuy Hang",1991-11-08,Female,074191001463,"Thanh Tuyen Commune, Dau Tieng District, Binh Duong Province, Vietnam",0965873717,buihang1991@gmail.com,180220DD0401,Nurse,NULL
+F199320HN608,"Nguyen Hai Nhi",1993-12-30,Female,074193003608,"Dau Tieng Town, Dau Tieng District, Binh Duong Province, Vietnam",0353579439,Hainhi1993@gmail.com,200120AK0306,Nurse,NULL
+F199519NK886,"Duong Thi Ngoc Kim",1995-12-17,Female,072195006886,"Duong Minh Chau District, Tay Ninh Province, Vietnam",0853536589,duongkim1122@gmail.com,210419DT2904,Nurse,NULL
+M197019DT117,"Le Dac Tam",1970-04-29,Male,074204003443,"No. 201, An Loc Hamlet, Dinh An Commune, Dau Tieng District, Binh Duong Province, Vietnam",0378611737,ledactam.290404@gmail.com,210419DT2904,"Head of Emergency Department",NULL
+M197119TB114,"Nguyen An Thien Bao",1971-02-03,Male,095271030114,"An Phuc Commune, Dong Hai District, Bac Lieu Province, Vietnam",0983426142,Baonguyen.1971@gmail.com,201219TB0302,"Head of Respiratory Department",NULL
+M197120DD041,"Nguyen Phuoc Dinh Dan",1971-01-04,Male,080271000861,"Tan Thanh District, Long An Province, Vietnam",0866216880,Npd.dan71@gmail.com,180220DD0401,"Head of Rehabilitation Department",NULL
+M197419AK725,"Tran Anh Khoi",1974-03-26,Male,070274007725,"Bom Bo Commune, Bu Dang District, Binh Phuoc Province, Vietnam",0986713994,Trananhkhoi74@gmail.com,181219AK2603,"Head of Cardiology Department",NULL
+M197420AK121,"Nguyen Anh Khoa",1974-06-03,Male,092274030121,"Co Do District, Can Tho Province, Vietnam",0784948177,nguyenanhkhoa.1971@gmail.com,200120AK0306,"Head of resuscitation department",NULL
+M198019TD088,"Phan Thanh Dat",1980-06-09,Male,079280030088,"Ward 27, Binh Thanh District, Ho Chi Minh City, Vietnam",0372282794,Phandat1980@gmail.com,201219TB0302,Doctor,NULL
+M198120MT125,"Doan Minh Thai",1981-12-22,Male,087281030125,"Cam My District, Dong Nai Province, Vietnam",0395665198,Thaidoan.22111@gmail.com,200120AK0306,Doctor,NULL
+M198619HL109,"Nguyen Hoang Long",1986-08-10,Male,079286030109,"Ward 21, Binh Thanh District, Ho Chi Minh City, Vietnam",0948107141,Long1111@gmail.com,210419DT2904,Doctor,NULL
+M198920AK133,"Le Anh Kiet",1989-03-13,Male,074289009538,"Phu An Commune, Ben Cat City, Binh Duong Province, Vietnam",095800785,la.kiet@gmail.com,180220DD0401,Doctor,NULL

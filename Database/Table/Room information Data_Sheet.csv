@@ -1,0 +1,10 @@
+RoomName,DepartmentID,RoomType,Location,Note
+A010001,210419DT2904,"Emergency room","Building A, 1st floor",
+A040012,201219TB0302,Clinic,"Building A, 4th floor",
+A040013,201219TB0302,Clinic,"Building A, 4th floor",
+A050019,NULL,"Blood test room","Building A, 5th floor",
+A050020,NULL,"Covid-19 testing room","Building A, 5th floor",
+A050021,NULL,"isolation room","Building A, 5th floor",
+B020045,181219AK2603,Clinic,"Building B, 2nd floor",
+B040123,200120AK0306,"Recovery room","Building B,4th floor",
+C020111,180220DD0401,"Rehabilitation room","Building C, 2nd floor",

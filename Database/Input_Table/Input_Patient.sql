@@ -1,0 +1,6 @@
+insert into Hospital_Information.Patient() values ('F2004MH86032','Phan Thi My Hanh','2004-12-30','Female','SV4740281386032','Thanh Tuyen Commune, Dau Tieng District, Binh Duong Province, Vietnam','0334602112','Myhanh.2004@gmail.com');
+insert into Hospital_Information.Patient() values ('M1999TH06051','Nguyen Trung Hau','1999-07-29','Male',null,'Tan Thanh District, Long An Province, Vietnam','0868099001',null);
+insert into Hospital_Information.Patient() values ('M2009MK30116','Nguyen Minh Khanh','2009-11-21','Male','HS4742254030116','Le Hong Phong Street, Dau Tieng Town, Dau Tieng District, Binh Duong Province, Vietnam','0342593558','minhKhanh211104@gmail.com');
+insert into Hospital_Information.Patient() values ('M2001NT07832','Nguyen Thong','2001-01-15','Male','DN3964204007832','Khanh An commune, U Minh district, Ca Mau province, Vietnam','0907715265','NThong.2222@gmail.com');
+insert into Hospital_Information.Patient() values ('M2004CV30129','Nguyen Cong Van','2004-05-20','Male','SV4802254030129','Long An Province, Vietnam','0971905778','Nvan.2004@gmail.com');
+insert into Hospital_Information.Patient() values ('M2006TL30087','Nguyen Tan Loc','2006-05-20','Male','SV4742254030087','Muong Dao Hamlet, Long Nguyen Commune, Bau Bang District, Binh Duong Province, Vietnam','0858682610','tloc.200504@gmail.com');
